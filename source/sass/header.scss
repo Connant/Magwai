@@ -1,0 +1,297 @@
+@import "./variables.scss";
+
+
+.page-header {
+  position: relative;
+  display: inline-flex;
+  justify-content: space-between;
+  height: 117px;
+  width: 100%;
+  background-color: $page-background;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 150%;
+
+  @media (max-width: $laptop-width) {
+    font-size: 12px;
+    justify-content: space-around;
+  }
+
+  @media (max-width: $min-laptop-width) {
+    font-size: 12px;
+    height: 110px;
+  }
+
+  @media (max-width: $big-mobile-width) {
+    height: 71px;
+    justify-content: space-between;
+  }
+}
+
+.main-nav {
+  display: inline-flex;
+  margin-left: 100px;
+
+  justify-content: end;
+
+  @media (max-width: $laptop-width) {
+    margin: 0;
+  }
+}
+
+.main-nav__logo {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $min-laptop-width) {
+    margin-top: 8px;
+  }
+
+  @media (max-width: $big-mobile-width) {
+    margin-top: 0px;
+    margin-right: 15px;
+  }
+
+}
+
+.main-nav__img {
+  @media (max-width: $big-mobile-width) {
+    width: 100px;
+    height: 39px;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  align-items: center;
+  padding-left: 55px;
+
+  @media (max-width: $laptop-width) {
+    padding-left: 15px;
+  }
+
+  @media (max-width: $min-laptop-width) {
+
+    flex-wrap: wrap;
+    max-width: none;
+    justify-content: start;
+    align-content: start;
+
+    width: 100%;
+    height: 530px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    margin: auto;
+    z-index: 4;
+    background-color: $page-background;
+    font-weight: 700;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 50px;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.5s;
+    animation-name: fade;
+    animation-duration: 0.5s;
+    box-shadow: 0px 10px 10px 10px $page-background;
+  }
+
+  @media (max-width: $tablet-width) {
+    height: 914px;
+    box-shadow: none;
+  }
+
+  @media (max-width: $big-mobile-width) {
+    top: 71px;
+    height: 630px;
+    padding-top: 5px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0px;
+    height: 498px;
+  }
+}
+
+.list__item {
+  padding: 21px;
+  font-weight: 700;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+    color: $accent-color;
+  }
+
+  @media (max-width: $laptop-width) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (max-width: $min-laptop-width) {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0;
+    padding: 10px 5px 0;
+    font-size: 10px;
+  }
+
+  @media (max-width: $min-laptop-width) {
+    padding: 15px 49px 0;
+    font-size: 36px;
+    line-height: 150%;
+    text-shadow: -1px 0 $form-text, 0 1px $form-text, 1px 0 $form-text, 0 -1px $form-text;
+    color: $page-background;
+  }
+
+  @media (max-width: $big-mobile-width) {
+    padding: 15px 22px 0;
+    font-size: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0px 18px 15px;
+    font-size: 20px;
+  }
+}
+
+.page-header__contacts {
+  display: flex;
+  align-items: center;
+  margin-right: 120px;
+
+  z-index: 5;
+
+  @media (max-width: $laptop-width) {
+    margin-top: 7px;
+    margin-right: 35px;
+  }
+
+  @media (max-width: $big-mobile-width) {
+    width: 100%;
+    height: 130px;
+    position: absolute;
+    top: 451px;
+    right: 0;
+    margin: auto;
+    font-weight: 700;
+    flex-direction: column;
+    padding-top: 53px;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.5s;
+    animation-name: fade;
+    animation-duration: 0.5s;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 351px;
+  }
+}
+
+.contacts-phone {
+  background-color: transparent;
+  border: 1px solid $basic-white;
+  padding: 17.5px 26px;
+  opacity: 0.4;
+  margin-right: 35px;
+  transform: skew(-17deg, 0);
+  transition: background-color .4s linear, border-color .4s linear, opacity .4s linear;
+
+  @media (max-width: $laptop-width) {
+    padding: 17.5px 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 7px;
+  }
+
+  @media (max-width: $big-mobile-width) {
+    margin-top: 15px;
+    margin-right: 0;
+    width: 274px;
+    padding: 17.5px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 17px;
+  }
+
+  & svg path {
+    transition: fill .4s linear;
+  }
+
+  &:hover {
+    background-color: $base-dark;
+    border-color: $accent-color;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.contacts-phone img {
+  transform: skew(17deg, 0);
+}
+
+.contacts-request {
+  @media (max-width: $big-mobile-width) {
+    margin-top: 15px;
+    margin-right: 0;
+    width: 250px;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 6px;
+    width: 210px;
+  }
+}
+
+
+.page-header__menu-btn {
+  width: 31px;
+  height: 19px;
+  position: relative;
+  display: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  @media (max-width: $min-laptop-width) {
+    display: block;
+    margin-top: 50px;
+  }
+
+  @media (max-width: $big-mobile-width) {
+    margin-top: 25px;
+    margin-left: 18px;
+  }
+}
+
+.close_menu {
+  display: none;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}

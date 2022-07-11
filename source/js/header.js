@@ -22,20 +22,8 @@ function header() {
   }
 
   window.addEventListener("resize", function () {
-    if (document.documentElement.clientWidth <= tablet_width && nav.classList.contains('close_menu')) {
-      nav.classList.add('close_menu')
-    }
-
-    if (document.documentElement.clientWidth <= big_mobile_width && nav.classList.contains('close_menu')) {
-      contactsWrapper.classList.add('close_menu')
-    }
-
     if (document.documentElement.clientWidth > tablet_width) {
       nav.classList.remove('close_menu')
-    }
-
-    if (document.documentElement.clientWidth > big_mobile_width) {
-      contactsWrapper.classList.remove('close_menu')
     }
   })
 

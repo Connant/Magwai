@@ -7,6 +7,7 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Mulish:wght@600;700&display=swap"
     rel="stylesheet">
@@ -41,12 +42,12 @@
       </div>
 
       <div class="page-header__contacts contacts">
-        <button class="contacts-phone">
+        <a href="tel:88003555353" class="contacts-phone">
           <img src="./img/phone.svg" alt="" />
-        </button>
+        </a>
 
         <button class="contacts-request popup-button yellow-button">
-          <span class="button-text">Оставить заявку</span>
+          <span class="yellow-button__text">Оставить заявку</span>
         </button>
 
       </div>
@@ -54,52 +55,63 @@
     </header>
 
     <main class="main">
+      <section class="main-slider">
+        <div class="swiper-wrapper">
 
-      <section class="slider">
-
-        <div class="swiper">
-
-          <div class="swiper-slide slide1">
-            <div class="swiper-container">
-              <h1 class="swiper__title">Полет Илона Маска и&nbsp;dogie coin</h1>
-              <p class="swiper__text">В прошлый четверг все офигели от полета DOGIE COIN на марс.</p>
-              <button class="swiper__button popup-button yellow-button">
-                <span class="swiper__button-text">Оставить заявку</span>
-              </button>
+          <div class="swiper-slide main-slider__slide gradient slide1">
+            <div class="container">
+              <div class="main-slider__description">
+                <h2 class="main-slider__title">Полет Илона Маска и&nbsp;dogie coin</h2>
+                <p class="main-slider__text">
+                  В прошлый четверг все офигели от полета DOGIE COIN на марс.
+                </p>
+                <div class="main-slider__buttons">
+                  <button class="popup-button yellow-button">
+                    <span class="yellow-button__text">Оставить заявку</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="swiper-slide slide2">
-            <div class="swiper-container">
-              <h1 class="swiper__title">Dogie coin упал</h1>
-              <p class="swiper__text">Все в шоке, я потерял все деньги</p>
-              <button class="swiper__button popup-button yellow-button">
-                <span class="swiper__button-text">Оставить заявку</span>
-              </button>
+          <div class="swiper-slide main-slider__slide gradient slide2">
+            <div class="container">
+              <div class="main-slider__description">
+                <h2 class="main-slider__title">DOGIE COIN УПАЛ</h2>
+                <p class="main-slider__text">
+                  Все в шоке, я потерял все деньги
+                </p>
+                <div class="main-slider__buttons">
+                  <button class="popup-button yellow-button">
+                    <span class="yellow-button__text">Оставить заявку</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="swiper-slide slide3">
-            <div class="swiper-container">
-              <h1 class="swiper__title">Эпическое возвращения на хаи</h1>
-              <p class="swiper__text">Все в шоке, я снова богат</p>
-              <button class="swiper__button popup-button yellow-button">
-                <span class="swiper__button-text">Оставить заявку</span>
-              </button>
+          <div class="swiper-slide main-slider__slide gradient slide3">
+            <div class="container">
+              <div class="main-slider__description">
+                <h2 class="main-slider__title">Эпическое возвращения на хаи</h2>
+                <p class="main-slider__text">
+                  Все в шоке, я снова богат
+                </p>
+                <div class="main-slider__buttons">
+                  <button class="popup-button yellow-button">
+                    <span class="yellow-button__text">Оставить заявку</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Написали, что интерактивность на усмотрение разработчика, так что добавила еще такой переключатель слайдов -->
-          <a class="swiper__forward" onclick="minusSlide()">&#10094;</a>
-          <a class="swiper__back" onclick="plusSlide()">&#10095;</a>
 
         </div>
-
-        <div class="swiper-dots dots">
-          <span class="dots__item" onclick="currentSlide(1)">Dogie coin</span>
-          <span class="dots__item" onclick="currentSlide(2)">Падение</span>
-          <span class="dots__item" onclick="currentSlide(3)">Возвращение</span>
+        <div class="main-slider__nav">
+          <div class="main-slider__pagination-wrapper">
+            <div class="main-slider__pagination swiper-pagination"></div>
+          </div>
         </div>
-
       </section>
 
       <section class="cards">
@@ -120,7 +132,8 @@
                 sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
               </p>
               <p class="cards__author">Posted by <span>Eugenia</span>, on July 24, 2019</p>
-              <a href="#" class="cards__link">Continue reading</a>
+
+              <button href="#" class="cards__link">Continue reading</button>
             </div>
           </li>
 
@@ -137,7 +150,7 @@
                 sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
               </p>
               <p class="cards__author">Posted by <span>Eugenia</span>, on July 24, 2019</p>
-              <a href="#" class="cards__link">Continue reading</a>
+              <button href="#" class="cards__link">Continue reading</button>
             </div>
           </li>
 
@@ -154,7 +167,7 @@
                 sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
               </p>
               <p class="cards__author">Posted by <span>Eugenia</span>, on July 24, 2019</p>
-              <a href="#" class="cards__link">Continue reading</a>
+              <button href="#" class="cards__link">Continue reading</button>
             </div>
           </li>
 
@@ -171,7 +184,7 @@
                 sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
               </p>
               <p class="cards__author">Posted by <span>Eugenia</span>, on July 24, 2019</p>
-              <a href="#" class="cards__link">Continue reading</a>
+              <button href="#" class="cards__link">Continue reading</button>
             </div>
           </li>
 
@@ -188,7 +201,7 @@
                 sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
               </p>
               <p class="cards__author">Posted by <span>Eugenia</span>, on July 24, 2019</p>
-              <a href="#" class="cards__link">Continue reading</a>
+              <button href="#" class="cards__link">Continue reading</button>
             </div>
           </li>
 
@@ -205,7 +218,7 @@
                 sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
               </p>
               <p class="cards__author">Posted by <span>Eugenia</span>, on July 24, 2019</p>
-              <a href="#" class="cards__link">Continue reading</a>
+              <button href="#" class="cards__link">Continue reading</button>
             </div>
           </li>
 
@@ -223,7 +236,7 @@
                 sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
               </p>
               <p class="cards__author">Posted by <span>Eugenia</span>, on July 24, 2019</p>
-              <a href="#" class="cards__link">Continue reading</a>
+              <button href="#" class="cards__link">Continue reading</button>
             </div>
           </li>
 
@@ -240,7 +253,7 @@
                 sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
               </p>
               <p class="cards__author">Posted by <span>Eugenia</span>, on July 24, 2019</p>
-              <a href="#" class="cards__link">Continue reading</a>
+              <button href="#" class="cards__link">Continue reading</button>
             </div>
           </li>
 
@@ -257,7 +270,7 @@
                 sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
               </p>
               <p class="cards__author">Posted by <span>Eugenia</span>, on July 24, 2019</p>
-              <a href="#" class="cards__link">Continue reading</a>
+              <button href="#" class="cards__link">Continue reading</button>
             </div>
           </li>
 
@@ -275,17 +288,15 @@
                 sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
               </p>
               <p class="cards__author">Posted by <span>Eugenia</span>, on July 24, 2019</p>
-              <a href="#" class="cards__link">Continue reading</a>
+              <button href="#" class="cards__link">Continue reading</button>
             </div>
           </li>
 
         </ul>
 
-        <div class="btn-block cards__btn-block">
-          <button id="load-btn" class="cards__btn yellow-button">
-            <span>Загрузить еще</span>
-          </button>
-        </div>
+        <button class="cards__btn cards__btn-block yellow-button">
+          <span class='yellow-button__text'>Загрузить еще</span>
+        </button>
       </section>
     </main>
 
@@ -300,7 +311,7 @@
         <!-- https://developer.mozilla.org/ru/docs/Learn/Forms/Form_validation -->
         <div class="popup__content">
 
-          <form class="popup__form form" novalidate>
+          <form id="ajax_form" class="popup__form form" novalidate>
             <div class="form__top-block">
               <div class="form__title-block">
                 <h2 class="form__title title">Оставьте заявку</h2>
@@ -314,13 +325,13 @@
 
             <input class="form__email popup__input" name="email" type="email" placeholder="E-mail*">
 
-            <input class="form__tel popup__input" name="tel"  type="tel" placeholder="+7(___)">
+            <input class="form__tel popup__input" name="tel" id="selector" type="tel" placeholder="+7(999)999-99-99">
 
-            <textarea class="form__message popup__input" placeholder="Ваш вопрос*"></textarea>
+            <textarea class="form__message popup__input" name="textarea" placeholder="Ваш вопрос*"></textarea>
 
             <div class="form__submit">
-              <button class="form__submit-button yellow-button form__btn" name="submit" type="submit">
-                <span class="button-text">Оставить заявку</span>
+              <button id="my_form" class="form__submit-button yellow-button form__btn" name="submit">
+                <span class="button-text yellow-button__text">Оставить заявку</span>
               </button>
               <p class="form__agreement">Нажимая на кнопку “Оставить заявку” вы соглашаетесь
                 <a class="form__agreement-link" href="#"> с&nbsp;“Пользовательским&nbsp;соглашением”</a> </p>
@@ -332,10 +343,23 @@
 
   </div>
 
-  <script src="./js/slider.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/imask"></script>
+
+  <script>
+    var element = document.getElementById('selector');
+    var maskOptions = {
+      mask: '+{7}(000)000-00-00'
+    };
+    var mask = IMask(element, maskOptions);
+
+  </script>
+
+  <script type="module" src="./js/swiper.js"></script>
+  <script type="module" src="./js/popup.js"></script>
+  <script src="./js/ajax.js"></script>
   <script src="./js/cards/loader.js"></script>
   <script type="module" src="./js/header.js"></script>
-  <script src="./js/popup.js"></script>
   <script type="module" src="./js/const.js"></script>
 </body>
 

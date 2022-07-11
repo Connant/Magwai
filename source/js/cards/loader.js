@@ -9,7 +9,7 @@ function Tempalte() {
   const title = document.createElement('h4');
   const cardsInfo = document.createElement('p');
   const author = document.createElement('p');
-  const button = document.createElement('a');
+  const button = document.createElement('button');
 
   card.classList.add('cards__item');
   img.classList.add('cards__img-json');

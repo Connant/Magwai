@@ -1,6 +1,4 @@
 
-//  Открытие и закрытие формы
-
 function popup() {
   const btn = document.querySelectorAll('.popup-button');
   const popup = document.querySelector('.popup');
@@ -17,6 +15,7 @@ function popup() {
       }
     })
   })
+
   function colse() {
     popup.classList.remove('popup--active')
     if (!document.body.classList.contains('overflow')) {
@@ -31,7 +30,6 @@ function popup() {
 
 popup()
 
-
 // Валидация формы
 // https://realadmin.ru/coding/valid-field-js.html
 
@@ -39,7 +37,6 @@ const form = document.querySelector('.popup__form')
 const formInputs = document.querySelectorAll('.popup__input')
 const inputEmail = document.querySelector('.form__email')
 const inputPhone = document.querySelector('.form__tel')
-
 
 function validateEmail(email) {
   const re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
@@ -59,21 +56,32 @@ form.onsubmit = function () {
   let phoneValue = inputPhone.value
   let emptyInputs = Array.from(formInputs).filter(input => input.value === '')
 
-  if(emptyInputs.length !== 0) {
-    alert('Пожалуйста, заполните все поля')
-    return false;
-  }
+  formInputs.forEach(function (input) {
+    if (input.value === '') {
+      input.classList.add('error')
+    } else {
+      input.classList.add('success')
+    }
+  })
 
-  if(!validateEmail(emailValue)) {
-    alert('Пожалуйста, введите корректный email-адрес');
-    return false;
-  }
-
-  if (!validatePhone(phoneValue)) {
-    alert('Пожалуйста, введите корректный номер телефона');
+  if (emptyInputs.length !== 0) {
+    inputEmail.classList.add('error');
     inputPhone.classList.add('error');
     return false;
   }
 
-  alert('Форма отправлена')
+  if (!validateEmail(emailValue)) {
+    inputEmail.classList.add('error');
+    return false;
+  } else {
+    inputEmail.classList.add('success')
+  }
+
+  if (!validatePhone(phoneValue)) {
+    inputPhone.classList.add('error');
+    return false;
+  } else {
+    inputPhone.classList.add('success')
+  }
+
 }
